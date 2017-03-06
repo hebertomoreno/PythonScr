@@ -1,0 +1,1 @@
+@py.exe C:\Users\hmoreno\Documents\Python\webScraping\lucky.py %*
