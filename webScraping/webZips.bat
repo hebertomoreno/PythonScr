@@ -1,0 +1,1 @@
+@py.exe C:\Users\hmoreno\Documents\PythonScr\webScraping\webZips.py %*

@@ -1,1 +1,1 @@
-@py.exe C:\Users\hmoreno\Documents\Python\webScraping\mapIt.py %*
+@py.exe C:\Users\hmoreno\Documents\PythonScr\webScraping\mapIt.py %*
