@@ -74,7 +74,8 @@ for mun in muns:
 
 		for item in loadedJson['features']:
 			parsedJsonName = item['properties']['NOMBRE']
-			#print(parsedJsonName)
+			# The json data is encoded in latin-1. It took me two days to find out. So, in order to compare
+			# the strings, we encode muniName in ut-8 and parsedJsonName in latin-1. 
 			if(muniName.encode('utf-8') == parsedJsonName.encode('latin-1')):
 				CVEGEO = item['properties']['CVEGEO']
 			#print(muniName.encode('utf-8'), parsedJsonName.encode('latin-1'))
