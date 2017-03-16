@@ -1,5 +1,5 @@
 '''https://medium.com/technology-invention-and-more/how-to-build-a-simple-neural-network-in-9-lines-of-python-code-cc8f23647ca1#.ge7vzmd56
-What is a Nueural Network?
+What is a Neural Network?
 	The human brain consists of 100 billion cells called
 	neurons, connected together by synapses. If 
 	sufficient synaptic inputs to a neuron fire, 
@@ -54,7 +54,7 @@ class NeuralNetwork():
 		self.synaptic_weights = 2 * random.random((3,1)) - 1
 
 	# The Sigmoid function, which describes an S shaped curve. 
-	# We passs the weighted sum of the inputs through this function to
+	# We pass the weighted sum of the inputs through this function to
 	# normalise them between 0 and 1. 
 	def __sigmoid(self,x):
 		return 1 / (1 + exp(-x))
@@ -69,7 +69,7 @@ class NeuralNetwork():
 	# Adjusting the synaptic weights each time. 
 	def train(self, training_set_inputs, training_set_outputs, number_of_training_iterations):
 		for iteration in range(number_of_training_iterations):
-			# Pass the training set through our neural network ( a single neuron).
+			# Pass the training set through our neural network (a single neuron).
 			output = self.think(training_set_inputs)
 
 			# Calculate the error (The difference between the desired output and
@@ -100,7 +100,12 @@ if __name__ == "__main__":
 	# and 1 output value. 
 	training_set_inputs = array([[0,0,1],[1,1,1],[1,0,1],[0,1,1]])
 	#The '.T' function transposes the matrix from horizontal to vertical
-	training_set_outputs = array([[0,1,1,0]]).T
+	t1 = input("First Number: ")
+	t2 = input("Second Number: ")
+	t3 = input("Third Number: ")
+	t4 = input("Fourth Number: ")
+	training_set_outputs = array([[int(t1),int(t2),int(t3),int(t4)]]).T
+	#training_set_outputs = array([[0,1,1,0]]).T
 
 	# Train the neural network using a training set. 
 	# Do it 10,000 times and make small adjustments each time. 
