@@ -2,7 +2,8 @@
 
 # change the values of lower and upper for a different result
 lower = 1
-upper = 100000000
+upper = 100000
+cont = 0
 
 # uncomment the following lines to take input from the user
 #lower = int(input("Enter lower range: "))
@@ -11,4 +12,11 @@ upper = 100000000
 print("Prime numbers between",lower,"and",upper,"are:")
 
 for num in range(lower,upper + 1):
-       print(num,end='')
+   if num > 1:
+       for i in range(2,num):
+           if (num % i) == 0:
+               break
+       else:
+       		cont += 1
+       		print(num,end=' ')
+print("There are "+str(cont)+ " prime numbers.")

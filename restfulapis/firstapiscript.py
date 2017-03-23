@@ -29,3 +29,8 @@ resp = requests.post('https://todolist.example.com/tasks/', json=task)
 if resp.status_code != 201:
 	raise ApiError('POST /tasks/ {}'.format(resp.status_code))
 print('Created task. ID: {}'.format(resp.json()["id"]))
+
+#Here is the longer version of a post request 
+resp = requests.post('https://todolist.example.com/tasks/',
+						data=json.dumps(task),
+						headers={'Content-Type':'application/json'})
