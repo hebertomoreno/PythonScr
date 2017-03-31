@@ -6,6 +6,6 @@ orders =pd.read_table('territoryRef.csv', sep=',')
 #print(orders.head())
 #print(orders.describe())
 
-orders['idWNameSSP'] = orders['SSP#'] + ',' + orders.SSP
+orders['idWNameSSP'] = orders['SSP'] + ', ' + str(orders['SSP#'])
 
-print(orders.head())
+print(orders['idWNameSSP'])
