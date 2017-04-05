@@ -17,6 +17,6 @@ for filename in pdfFiles:
 	pageObj = pdfReader.getPage(0)
 	pdfWriter.addPage(pageObj)
 
-pdfOutput = open('allminutes.pdf','wb')
+pdfOutput = open('thisBookHasNoChapters.pdf','wb')
 pdfWriter.write(pdfOutput)
 pdfOutput.close()
