@@ -8,5 +8,5 @@ z = float(input())
 
 marginOfError = z * stdDev / math.sqrt(n)
 
-print (round(meanPop - marginOfError, 3))
-print (round(meanPop + marginOfError, 3))
+print(round(meanPop - marginOfError, 3))
+print(round(meanPop + marginOfError, 3))

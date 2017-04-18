@@ -1,11 +1,14 @@
 class Person:
+	'''This is the class constructor. It initializes the instance of the class with the
+	values passed to it. The first parameter is always itself.'''
 	def __init__(self, initialAge):
 		if(initialAge >= 0):
 			self.age = initialAge
 		else:
 			self.age = 0
 			print("Age is not valid, setting age to 0.")
-
+	'''When defining a class method, it must always receive at least one
+	parameter, itself.'''
 	def yearPasses(self):
 		self.age += 1
 		
