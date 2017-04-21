@@ -24,7 +24,6 @@ for i in range(n):
 	newAlphabet= keyWord + alphabet
 	#Removes duplicates from the alphabet, but keeps the order. 
 	newAlphabet = f7(newAlphabet)
-
 	#Strip the duplicates from the keyword
 	keyWord = f7(keyWord)
 	#Make a new variable to hold the keyword sorted alphabetically
@@ -48,6 +47,10 @@ for i in range(n):
 			cypherArray.append(alphArray)
 			alphArray=[]
 			cont=1
+		#If this is the last letter in the array, append it to 
+		# a chunk and fill the rest with zeroes. The Zeroes will not
+		#be taken into account in future manipulations of the array. 
+		#This is to avoid empty index exceptions. 
 		elif(letter==newAlphabet[-1]):
 			alphArray.append(letter)
 			while(cont != len(keyWord)):
@@ -57,7 +60,7 @@ for i in range(n):
 		else:
 			alphArray.append(letter)
 			cont +=1
-
+	#
 	encryptedArray = []
 	for number in cypherNumbers:
 		chunkArray=[]
@@ -80,10 +83,5 @@ for i in range(n):
 		else:
 			location = flatArray.index(letter)
 			newLetter = alphabet[location]
-			'''encryptedIndex = find(encryptedArray, letter)
-			#print(encryptedIndex)
-			row, column = encryptedIndex
-			#encryptedIndex=encryptedArray.index(letter)
-			newLetter = cypherArray[row][column]'''
 			print(newLetter, end="")
 	print("")

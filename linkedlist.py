@@ -34,6 +34,7 @@ class LinkedList(object):
 			count += 1
 			current = current.get_next()
 		return count
+		
 	#Searches the list for the requested data. Returns the node. 
 	def search(self, data):
 		current = self.head
