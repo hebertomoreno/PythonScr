@@ -11,27 +11,37 @@
 #Catches a phone number with hyphens
 phoneNumRegex = re.compile(r'\d\d\d-\d\d\d-\d\d\d\d')
 phoneNumRegex = re.compile(r'(\d){3}-(\d){3}-(\d){4}')
+
 #Catches a phone number  wrapping the area code and the number in two groups
 phoneNumRegex = re.compile(r'(\d\d\d)-(\d\d\d-\d\d\d\d)')
+
 #Catches a phone number INCLUDING parentheses, also two groups
 phoneNumRegex = re.compile(r'(\(\d\d\d\))(\d\d\d-\d\d\d\d)')
+
 #The string 'Batman' or the string 'Tina Fey' 
 heroRegex = re.compile(r'Batman|Tina Fey')
+
 #'Bat' followed by either man, mobile, copter or bat
 batRegex = re.compile(r'Bat(man|mobile|copter|bat)')
+
 #The question mark after the group to be searched indicates
 #That the item may or may not be there
 #'Bat' then zero or one times 'wo' then man
 #Catches 'Batman' and 'Batwoman'
 batRegex = re.compile(r'Bat(wo)?man')
+
 #Phone number with or without area code
 phoneRegex = re.compile(r'(\d\d\d-)?\d\d\d-\d\d\d\d')
+
 #'Bat' followed by zero or MORE 'wo' then 'man'
 batRegex = re.compile(r'Bat(wo)*man')
+
 #'Bat' followed by one or more 'wo' then 'man'
 batRegex = re.compile(r'Bat(wo)+man')
+
 #Three 'Ha's
 haRegex = re.compile(r'(Ha){3}')
+
 #Matches the longest string possible of 3 to 5 'Ha's
 greedyHaRegex = re.compile(r'(Ha){3,5}')
 #Matches the shortest string possible of 3 to 5 'Ha's
